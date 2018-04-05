@@ -35,7 +35,11 @@ namespace Kalkylator
                 );
             choice = Console.ReadLine();
 
-            int.TryParse(choice, out intChoice);
+            if(int.TryParse(choice, out intChoice) == false)
+            {
+                Console.WriteLine("\n" + choice + " is not a valid option!");
+                Console.ReadKey();
+            }
 
             switch (intChoice)
             {
@@ -58,8 +62,7 @@ namespace Kalkylator
                     return false;
 
                 default:
-                    Console.WriteLine("\n" + choice + " is not a valid option!");
-                    Console.ReadKey();
+
                     break;
             }
 
@@ -79,9 +82,18 @@ namespace Kalkylator
                 Console.WriteLine("Give me the first number: ");
 
                 parameterString = Console.ReadLine();
-                float.TryParse(parameterString, out firstParameter);
+                if (float.TryParse(parameterString, out firstParameter) == false)
+                {
+                    Console.Clear();
+                    Console.WriteLine("That is not a valid number! Start over!");
+                    //Console.ReadKey();
+                    Addition();
+                }
 
-                Console.WriteLine("Now give me a second number: ");
+
+            //float.TryParse(parameterString, out firstParameter);
+
+            Console.WriteLine("Now give me a second number: ");
 
                 parameterString = Console.ReadLine();
                 float.TryParse(parameterString, out secondParameter);
