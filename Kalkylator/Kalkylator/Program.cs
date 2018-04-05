@@ -11,5 +11,12 @@ namespace Kalkylator
         static void Main(string[] args)
         {
         }
+
+        float Addition(float number1, float number2)
+        {
+            float answer = 0;
+
+            return(answer);
+        }
     }
 }
