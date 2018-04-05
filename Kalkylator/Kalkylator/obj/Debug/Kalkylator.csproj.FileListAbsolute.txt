@@ -1,0 +1,7 @@
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.exe.config
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.exe
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.pdb
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.csprojResolveAssemblyReference.cache
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.csproj.CoreCompileInputs.cache
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.exe
+C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.pdb
