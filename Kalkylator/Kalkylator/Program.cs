@@ -31,7 +31,10 @@ namespace Kalkylator
                             + "2. Subtraction" + "\n"
                             + "3. Multiplication" + "\n"
                             + "4. Division" + "\n"
-                            + "5. End" + "\n"
+                            + "5. Multiple Addition" + "\n"
+                            + "6. Multiple Subtraction" + "\n"
+                            + "7. Combined" + "\n"
+                            + "8. End" + "\n"
                 );
             choice = Console.ReadLine();
 
@@ -55,6 +58,17 @@ namespace Kalkylator
                     break;
 
                 case 5:
+                    MultipleAddition();
+                    break;
+
+                case 6:
+                    MultipleSubtraction();
+                    break;
+
+                case 7:
+                    ActualCalculator();
+                    break;
+                case 8:
                     return false;
 
                 default:
@@ -187,6 +201,83 @@ namespace Kalkylator
                     StartMenu();
                 else
                     Division();
+            }
+        }
+
+        private static void ActualCalculator()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void MultipleSubtraction()
+        {
+            string input;
+            int inputNumber = 0;
+            float value = 0;
+            float answer = 0;
+
+            Console.Clear();
+            Console.WriteLine("How many numbers would you like to subtract with?");
+            input = Console.ReadLine();
+
+            int.TryParse(input, out inputNumber);
+
+            for (int i = 0; i < inputNumber; i++)
+            {
+                if (i == 0)
+                {
+                    Console.WriteLine("Input a number: ");
+                    input = Console.ReadLine();
+                    float.TryParse(input, out value);
+                    answer += value;
+                }
+                else
+                {
+                    value = 0;
+
+                    Console.WriteLine("Input a number: ");
+                    input = Console.ReadLine();
+                    float.TryParse(input, out value);
+                    answer -= value;
+                }
+            }
+
+            Console.WriteLine("The answer is: " + answer);
+            Console.WriteLine("Return to menu y/n");
+            if (Console.ReadLine() == "y")
+                StartMenu();
+            else
+                MultipleSubtraction();
+        }
+
+        private static void MultipleAddition()
+        {
+            string input;
+            int inputNumber = 0;
+            float value = 0;
+            float answer = 0;
+
+            Console.Clear();
+            Console.WriteLine("How many numbers would you like to add together?");
+            input = Console.ReadLine();
+
+            int.TryParse(input, out inputNumber);
+
+            for (int i = 0; i < inputNumber; i++)
+            {
+                Console.WriteLine("Input a number: ");
+                input = Console.ReadLine();
+
+                float.TryParse(input, out value);
+                answer += value;
+
+                Console.WriteLine("The answer is: " + answer);
+                Console.WriteLine("Return to menu y/n");
+
+                if (Console.ReadLine() == "y")
+                    StartMenu();
+                else
+                    MultipleSubtraction();
             }
         }
     }
