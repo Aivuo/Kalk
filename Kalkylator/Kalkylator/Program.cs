@@ -22,7 +22,6 @@ namespace Kalkylator
         static bool StartMenu()
         {
             string choice;
-            int intChoice = 0;
 
             Console.Clear();
             Console.WriteLine("Welcome to the Calculator" + "\n"
@@ -35,26 +34,24 @@ namespace Kalkylator
                 );
             choice = Console.ReadLine();
 
-            int.TryParse(choice, out intChoice);
-
-            switch (intChoice)
+            switch (choice)
             {
-                case 1:
+                case "1":
                     Addition();
                     break;
 
-                case 2:
+                case "2":
                     Subtraction();
                     break;
-                case 3:
+                case "3":
                     Multiplication();
                     break;
 
-                case 4:
+                case "4":
                     Division();
                     break;
 
-                case 5:
+                case "5":
                     return false;
 
                 default:
@@ -64,16 +61,18 @@ namespace Kalkylator
             }
 
             return true;
+        }
 
+        static void Addition()
+        {
+            float answer = 0;
 
-            void Addition()
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
                 Console.Clear();
                 Console.WriteLine("Welcome to Addition!");
                 Console.WriteLine("Give me the first number: ");
@@ -90,19 +89,20 @@ namespace Kalkylator
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Addition();
+                    return; 
             }
+        }
 
-            void Subtraction()
+        static void Subtraction()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
                 Console.Clear();
                 Console.WriteLine("Welcome to Subtraction!");
                 Console.WriteLine("Give me the first number: ");
@@ -119,19 +119,20 @@ namespace Kalkylator
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Subtraction();
+                    return; 
             }
+        }
 
-            void Multiplication()
+        static void Multiplication()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
                 Console.Clear();
                 Console.WriteLine("Welcome to Multiplication!");
                 Console.WriteLine("Give me the first number: ");
@@ -148,19 +149,20 @@ namespace Kalkylator
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Multiplication();
+                    return; 
             }
+        }
 
-            void Division()
+        static void Division()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
                 Console.Clear();
                 Console.WriteLine("Welcome to Division!");
                 Console.WriteLine("Give me the first number: ");
@@ -177,140 +179,15 @@ namespace Kalkylator
                 {
                     Console.WriteLine("0 is not an acceptable second parameter!");
                     Console.ReadKey();
-                    Division();
+                    continue;
                 }
 
                 answer = firstParameter / secondParameter;
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Division();
+                    return; 
             }
         }
-
-        //static void Addition()
-        //{
-        //    float answer = 0;
-
-        //    String parameterString;
-        //    float firstParameter = 0;
-        //    float secondParameter = 0;
-
-        //    Console.Clear();
-        //    Console.WriteLine("Welcome to Addition!");
-        //    Console.WriteLine("Give me the first number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out firstParameter);
-
-        //    Console.WriteLine("Now give me a second number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out secondParameter);
-
-        //    answer = firstParameter + secondParameter;
-        //    Console.WriteLine("The answer is: " + answer);
-        //    Console.WriteLine("Return to menu y/n");
-        //    if (Console.ReadLine() == "y")
-        //        StartMenu();
-        //    else
-        //        Addition();
-        //}
-
-        //static void Subtraction()
-        //{
-        //    float answer = 0;
-
-        //    String parameterString;
-        //    float firstParameter = 0;
-        //    float secondParameter = 0;
-
-        //    Console.Clear();
-        //    Console.WriteLine("Welcome to Subtraction!");
-        //    Console.WriteLine("Give me the first number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out firstParameter);
-
-        //    Console.WriteLine("Now give me a second number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out secondParameter);
-
-        //    answer = firstParameter - secondParameter;
-        //    Console.WriteLine("The answer is: " + answer);
-        //    Console.WriteLine("Return to menu y/n");
-        //    if (Console.ReadLine() == "y")
-        //        StartMenu();
-        //    else
-        //        Subtraction();
-        //}
-
-        //static void Multiplication()
-        //{
-        //    float answer = 0;
-
-        //    String parameterString;
-        //    float firstParameter = 0;
-        //    float secondParameter = 0;
-
-        //    Console.Clear();
-        //    Console.WriteLine("Welcome to Multiplication!");
-        //    Console.WriteLine("Give me the first number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out firstParameter);
-
-        //    Console.WriteLine("Now give me a second number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out secondParameter);
-
-        //    answer = firstParameter * secondParameter;
-        //    Console.WriteLine("The answer is: " + answer);
-        //    Console.WriteLine("Return to menu y/n");
-        //    if (Console.ReadLine() == "y")
-        //        StartMenu();
-        //    else
-        //        Multiplication();
-        //}
-
-        //static void Division()
-        //{
-        //    float answer = 0;
-
-        //    String parameterString;
-        //    float firstParameter = 0;
-        //    float secondParameter = 0;
-
-        //    Console.Clear();
-        //    Console.WriteLine("Welcome to Division!");
-        //    Console.WriteLine("Give me the first number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out firstParameter);
-
-        //    Console.WriteLine("Now give me a second number: ");
-
-        //    parameterString = Console.ReadLine();
-        //    float.TryParse(parameterString, out secondParameter);
-
-        //    if (secondParameter == 0)
-        //    {
-        //        Console.WriteLine("0 is not an acceptable second parameter!");
-        //        Console.ReadKey();
-        //        Division();
-        //    }
-
-        //    answer = firstParameter / secondParameter;
-        //    Console.WriteLine("The answer is: " + answer);
-        //    Console.WriteLine("Return to menu y/n");
-        //    if (Console.ReadLine() == "y")
-        //        StartMenu();
-        //    else
-        //        Division();
-        //}
     }
 }

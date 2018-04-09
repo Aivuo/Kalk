@@ -5,3 +5,10 @@ C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.
 C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.csproj.CoreCompileInputs.cache
 C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.exe
 C:\Users\Lexicon\Desktop\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.pdb
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.exe.config
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.exe
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\bin\Debug\Kalkylator.pdb
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.csprojResolveAssemblyReference.cache
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.csproj.CoreCompileInputs.cache
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.exe
+C:\Users\rione\Documents\GitHub\Kalk\Kalkylator\Kalkylator\obj\Debug\Kalkylator.pdb
