@@ -33,8 +33,7 @@ namespace Kalkylator
                             + "4. Division" + "\n"
                             + "5. Multiple Addition" + "\n"
                             + "6. Multiple Subtraction" + "\n"
-                            + "7. Combined" + "\n"
-                            + "8. End" + "\n"
+                            + "7. End" + "\n"
                 );
             choice = Console.ReadLine();
 
@@ -66,9 +65,6 @@ namespace Kalkylator
                     break;
 
                 case 7:
-                    ActualCalculator();
-                    break;
-                case 8:
                     return false;
 
                 default:
@@ -79,73 +75,18 @@ namespace Kalkylator
 
             return true;
 
+        }
 
-            void Addition()
+        private static void Multiplication()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
-                Console.Clear();
-                Console.WriteLine("Welcome to Addition!");
-                Console.WriteLine("Give me the first number: ");
-
-                parameterString = Console.ReadLine();
-                float.TryParse(parameterString, out firstParameter);
-
-                Console.WriteLine("Now give me a second number: ");
-
-                parameterString = Console.ReadLine();
-                float.TryParse(parameterString, out secondParameter);
-
-                answer = firstParameter + secondParameter;
-                Console.WriteLine("The answer is: " + answer);
-                Console.WriteLine("Return to menu y/n");
-                if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Addition();
-            }
-
-            void Subtraction()
-            {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
-                Console.Clear();
-                Console.WriteLine("Welcome to Subtraction!");
-                Console.WriteLine("Give me the first number: ");
-
-                parameterString = Console.ReadLine();
-                float.TryParse(parameterString, out firstParameter);
-
-                Console.WriteLine("Now give me a second number: ");
-
-                parameterString = Console.ReadLine();
-                float.TryParse(parameterString, out secondParameter);
-
-                answer = firstParameter - secondParameter;
-                Console.WriteLine("The answer is: " + answer);
-                Console.WriteLine("Return to menu y/n");
-                if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Subtraction();
-            }
-
-            void Multiplication()
-            {
-                float answer = 0;
-
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
-
                 Console.Clear();
                 Console.WriteLine("Welcome to Multiplication!");
                 Console.WriteLine("Give me the first number: ");
@@ -162,19 +103,81 @@ namespace Kalkylator
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Multiplication();
+                    return;
             }
+        }
 
-            void Division()
+        private static void Subtraction()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
             {
-                float answer = 0;
+                Console.Clear();
+                Console.WriteLine("Welcome to Subtraction!");
+                Console.WriteLine("Give me the first number: ");
 
-                String parameterString;
-                float firstParameter = 0;
-                float secondParameter = 0;
+                parameterString = Console.ReadLine();
+                float.TryParse(parameterString, out firstParameter);
 
+                Console.WriteLine("Now give me a second number: ");
+
+                parameterString = Console.ReadLine();
+                float.TryParse(parameterString, out secondParameter);
+
+                answer = firstParameter - secondParameter;
+                Console.WriteLine("The answer is: " + answer);
+                Console.WriteLine("Return to menu y/n");
+                if (Console.ReadLine() == "y")
+                    return;
+            }
+        }
+
+
+        private static void Addition()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Welcome to Addition!");
+                Console.WriteLine("Give me the first number: ");
+
+                parameterString = Console.ReadLine();
+                float.TryParse(parameterString, out firstParameter);
+
+                Console.WriteLine("Now give me a second number: ");
+
+                parameterString = Console.ReadLine();
+                float.TryParse(parameterString, out secondParameter);
+
+                answer = firstParameter + secondParameter;
+                Console.WriteLine("The answer is: " + answer);
+                Console.WriteLine("Return to menu y/n");
+                if (Console.ReadLine() == "y")
+                    return;
+            }
+        }
+
+        private static void Division()
+        {
+            float answer = 0;
+
+            String parameterString;
+            float firstParameter = 0;
+            float secondParameter = 0;
+
+            while (true)
+            {
                 Console.Clear();
                 Console.WriteLine("Welcome to Division!");
                 Console.WriteLine("Give me the first number: ");
@@ -198,15 +201,8 @@ namespace Kalkylator
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    Division();
+                    return;
             }
-        }
-
-        private static void ActualCalculator()
-        {
-            throw new NotImplementedException();
         }
 
         private static void MultipleSubtraction()
@@ -216,38 +212,38 @@ namespace Kalkylator
             float value = 0;
             float answer = 0;
 
-            Console.Clear();
-            Console.WriteLine("How many numbers would you like to subtract with?");
-            input = Console.ReadLine();
-
-            int.TryParse(input, out inputNumber);
-
-            for (int i = 0; i < inputNumber; i++)
+            while (true)
             {
-                if (i == 0)
-                {
-                    Console.WriteLine("Input a number: ");
-                    input = Console.ReadLine();
-                    float.TryParse(input, out value);
-                    answer += value;
-                }
-                else
-                {
-                    value = 0;
+                Console.Clear();
+                Console.WriteLine("How many numbers would you like to subtract with?");
+                input = Console.ReadLine();
 
-                    Console.WriteLine("Input a number: ");
-                    input = Console.ReadLine();
-                    float.TryParse(input, out value);
-                    answer -= value;
+                int.TryParse(input, out inputNumber);
+
+                for (int i = 0; i < inputNumber; i++)
+                {
+                    if (i == 0)
+                    {
+                        Console.WriteLine("Input a number: ");
+                        input = Console.ReadLine();
+                        float.TryParse(input, out value);
+                        answer += value;
+                    }
+                    else
+                    {
+                        value = 0;
+
+                        Console.WriteLine("Input a number: ");
+                        input = Console.ReadLine();
+                        float.TryParse(input, out value);
+                        answer -= value;
+                    }
                 }
+                Console.WriteLine("The answer is: " + answer);
+                Console.WriteLine("Return to menu y/n");
+                if (Console.ReadLine() == "y")
+                    return;
             }
-
-            Console.WriteLine("The answer is: " + answer);
-            Console.WriteLine("Return to menu y/n");
-            if (Console.ReadLine() == "y")
-                StartMenu();
-            else
-                MultipleSubtraction();
         }
 
         private static void MultipleAddition()
@@ -257,27 +253,27 @@ namespace Kalkylator
             float value = 0;
             float answer = 0;
 
-            Console.Clear();
-            Console.WriteLine("How many numbers would you like to add together?");
-            input = Console.ReadLine();
-
-            int.TryParse(input, out inputNumber);
-
-            for (int i = 0; i < inputNumber; i++)
+            while (true)
             {
-                Console.WriteLine("Input a number: ");
+                Console.Clear();
+                Console.WriteLine("How many numbers would you like to add together?");
                 input = Console.ReadLine();
 
-                float.TryParse(input, out value);
-                answer += value;
+                int.TryParse(input, out inputNumber);
 
+                for (int i = 0; i < inputNumber; i++)
+                {
+                    Console.WriteLine("Input a number: ");
+                    input = Console.ReadLine();
+
+                    float.TryParse(input, out value);
+                    answer += value;
+                }
                 Console.WriteLine("The answer is: " + answer);
                 Console.WriteLine("Return to menu y/n");
 
                 if (Console.ReadLine() == "y")
-                    StartMenu();
-                else
-                    MultipleSubtraction();
+                    return;
             }
         }
     }
